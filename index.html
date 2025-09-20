@@ -3,116 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Maximiliaan Hendrikx</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
+<header>
+    <div class="container">
+        <h1>Maximiliaan Hendrikx</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="hero">
+    <div class="container">
+        <h2>Welcome to my portfolio</h2>
+        <p>Software Developer & Problem Solver</p>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I am a passionate software developer specializing in Unity C# development. With a handful of released games
+            and experiences under my belt, on five different platforms, I have lots of relevant experience.
+            <br> I graduated from Howest with a Bachelor of Independent Game Production, where I graduated Magna Cum
+            Laude.
+            <br> I am currently working as a Lead Programmer at a small game development company, AlterEyes.
+        </p>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Big Shots</h3>
+                <p>A co-op cross-platform roguelite mech shooter</p>
+                <div class="project-links">
+                    <a href="#" class="btn">View Project</a>
+                    <a href="#" class="btn">Source Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Color A Cube</h3>
+                <p>A cozy coloring by number game</p>
+                <div class="project-links">
+                    <a href="#" class="btn">View Project</a>
+                    <a href="#" class="btn">Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Languages</h3>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>C#</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero">
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Software Developer & Problem Solver</p>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a passionate software developer specializing in C++ development. With a strong foundation in algorithms, data structures, and system design, I create efficient and maintainable solutions to complex problems.</p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Description of your first project goes here.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Project</a>
-                        <a href="#" class="btn">Source Code</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Description of your second project goes here.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Project</a>
-                        <a href="#" class="btn">Source Code</a>
-                    </div>
-                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>Unity</li>
+                    <li>Git</li>
+                    <li>Unity Game Services</li>
+                    <li>Rider</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>C++</li>
-                        <li>C</li>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>CMake</li>
-                        <li>Visual Studio</li>
-                        <li>Linux</li>
-                    </ul>
-                </div>
+<section id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out if you have any questions or want to discuss potential collaboration.</p>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
             </div>
-        </div>
-    </section>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out if you have any questions or want to discuss potential collaboration.</p>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+<footer>
+    <div class="container">
+        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    </div>
+</footer>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
