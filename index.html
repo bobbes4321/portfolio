@@ -16,7 +16,7 @@
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#interests">Life Beyond Code</a></li>
+                <li><a href="#interests">Interests</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://www.linkedin.com/in/maximiliaan-hendrikx-8a960521b/" target="_blank">LinkedIn</a></li>
             </ul>
@@ -124,7 +124,7 @@
                     <img src="images/tectum.jpg" alt="Tectum VR Training Screenshot">
                 </div>
                 <div class="project-content">
-                <h3>Tectum (B2B)</h3>
+                <h3>Tectum</h3>
                 <p><strong>Sole Developer | VR Safety Training</strong></p>
                 <p>A comprehensive roof safety training application. Guided new employees through safety modules, equipment checks, and risk assessments.</p>
                 <ul class="project-details">
@@ -147,7 +147,7 @@
                     <img src="images/silmaco.jpg" alt="Silmaco XR Training Screenshot">
                 </div>
                 <div class="project-content">
-                <h3>Silmaco (B2B)</h3>
+                <h3>Silmaco</h3>
                 <p><strong>Sole Developer | XR/Desktop Industrial Training</strong></p>
                 <p>A chemical plant operation training tool using a digital twin and 360° video to teach complex machine start/stop procedures.</p>
                 <ul class="project-details">
@@ -267,25 +267,37 @@
 <section id="contact">
     <div class="container">
         <h2>Get In Touch</h2>
-        <div class="contact-intro">
-            <p>I'm always open to discussing new opportunities or technical challenges. Feel free to reach out!</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p>I'm always open to discussing new opportunities or technical challenges. Feel free to reach out!</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <span class="contact-icon">📧</span>
+                        <a href="mailto:maximiliaanhendrikx@gmail.com">maximiliaanhendrikx@gmail.com</a>
+                    </div>
+                    <div class="contact-method">
+                        <span class="contact-icon">🔗</span>
+                        <a href="https://www.linkedin.com/in/maximiliaan-hendrikx-8a960521b/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+            <form id="contact-form" action="https://formspree.io/f/xpqojbzn" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <div id="form-status" class="form-status"></div>
+            </form>
         </div>
-        <form id="contact-form" action="https://formspree.io/f/xpqojbzn" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-            <div id="form-status" class="form-status"></div>
-        </form>
     </div>
 </section>
 

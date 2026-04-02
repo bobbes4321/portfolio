@@ -545,12 +545,55 @@ nav ul li a:hover {
 }
 
 #contact .container {
-    max-width: 800px;
+    max-width: 1000px;
 }
 
-.contact-intro {
-    text-align: center;
-    margin-bottom: 40px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: #e1f0fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.contact-method a {
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+    color: #3498db;
 }
 
 .form-group {
@@ -657,11 +700,27 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header .container {
-        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    header h1 {
+        font-size: 20px;
     }
 
     nav ul {
-        margin-top: 20px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 3px;
     }
 
     #hero h1 {
@@ -682,7 +741,12 @@ footer {
     }
 
     .skills-container,
-    .project-grid {
+    .project-grid,
+    .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        gap: 40px;
     }
 }
