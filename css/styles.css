@@ -435,7 +435,18 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
+}
+
+.skills-intro {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 1.15rem;
+    color: #444;
+}
+
+.skills-intro p {
+    margin-bottom: 0;
 }
 
 .skill-category {
