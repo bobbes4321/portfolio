@@ -9,26 +9,56 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling
+// Form submission handling with Formspree
 const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        const data = new FormData(contactForm);
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Sending...';
+        formStatus.innerText = '';
+        formStatus.className = 'form-status';
 
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-        // Here you would typically send this data to a server
-        // For now, we'll just log it and show a success message
-        console.log('Form submitted:', { name, email, message });
-
-        // Display success message
-        alert('Thank you for your message! I will get back to you soon.');
-
-        // Reset form
-        contactForm.reset();
+            if (response.ok) {
+                // Success
+                formStatus.innerText = 'Thanks for reaching out! I will get back to you as soon as possible.';
+                formStatus.className = 'form-status success';
+                contactForm.reset();
+            } else {
+                // Error from server
+                const errorData = await response.json();
+                if (Object.hasOwnProperty.call(errorData, 'errors')) {
+                    formStatus.innerText = errorData["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    formStatus.innerText = 'Oops! There was a problem submitting your form.';
+                }
+                formStatus.className = 'form-status error';
+            }
+        } catch (error) {
+            // Network error
+            formStatus.innerText = 'Oops! There was a problem submitting your form.';
+            formStatus.className = 'form-status error';
+        } finally {
+            // Restore button state
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Send Message';
+        }
     });
 }
 
