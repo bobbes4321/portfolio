@@ -16,6 +16,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/maximiliaan-hendrikx-8a960521b/" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
     </div>
@@ -23,41 +24,136 @@
 
 <section id="hero">
     <div class="container">
-        <h2>Welcome to my portfolio</h2>
-        <p>Software Developer & Problem Solver</p>
+        <div class="hero-content">
+            <h1>Maximiliaan Hendrikx</h1>
+            <p>Lead Unity Developer & Multi-platform Game Specialist</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
     </div>
+    <a href="#about" class="scroll-down">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+    </a>
 </section>
 
 <section id="about">
     <div class="container">
         <h2>About Me</h2>
-        <p>I am a passionate software developer specializing in Unity C# development. With a handful of released games
-            and experiences under my belt, on five different platforms, I have lots of relevant experience.
-            <br> I graduated from Howest with a Bachelor of Independent Game Production, where I graduated Magna Cum
-            Laude.
-            <br> I am currently working as a Lead Programmer at a small game development company, AlterEyes.
-        </p>
+        <div class="about-flex">
+            <div class="about-image">
+                <img src="images/Headshot.jpg" alt="Maximiliaan Hendrikx Headshot">
+            </div>
+            <div class="about-text">
+                <p>I am a passionate software developer specializing in Unity C# development. As a <strong>Lead Programmer</strong> at <strong>AlterEyes</strong>, I have extensive experience managing small developer teams and collaborating across departments to deliver high-quality games and B2B applications.</p>
+                <p>With a proven track record of shipping titles across <strong>PS5 VR, SteamVR, Meta Quest, and Pico</strong>, I excel at building core gameplay systems, implementing multiplayer features, and creating efficient editor tools to streamline production.</p>
+                <p>I graduated Magna Cum Laude with a Bachelor of Independent Game Production from Howest (DAE).</p>
+                <div class="about-actions">
+                    <a href="Hendrikx.pdf" class="btn" target="_blank">Download CV (PDF)</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="projects">
     <div class="container">
         <h2>Projects</h2>
+        
+        <h3>Commercial Projects</h3>
         <div class="project-grid">
+            <!-- Big Shots -->
             <div class="project-card">
+                <div class="project-image">
+                    <img src="images/big-shots.jpg" alt="Big Shots Game Screenshot">
+                </div>
+                <div class="project-content">
                 <h3>Big Shots</h3>
-                <p>A co-op cross-platform roguelite mech shooter</p>
+                <p><strong>Lead Developer | VR Mech Roguelite Shooter</strong></p>
+                <p>A cooperative roguelite VR mech wave shooter released on PS5 VR, SteamVR, Meta Quest, and Pico. Led a team of 4 developers from vertical slice to multi-platform release.</p>
+                <ul class="project-details">
+                    <li>Contributed to core systems: wave management, weapon mechanics, enemy AI (pathfinding), and networking.</li>
+                    <li>Implemented cross-platform features using Unity Game Services (Authentication, Leaderboards, Friends, Player Data).</li>
+                    <li>Developed multiplayer functionality with Photon Fusion and integrated Vivox voice chat.</li>
+                    <li>Handled complete sound design and created custom development/optimization tools.</li>
+                </ul>
                 <div class="project-links">
-                    <a href="#" class="btn">View Project</a>
-                    <a href="#" class="btn">Source Code</a>
+                    <a href="https://www.bigshots-vr.com/" class="btn" target="_blank">View Project</a>
+                </div>
                 </div>
             </div>
+
+            <!-- Color A Cube -->
             <div class="project-card">
+                <div class="project-image">
+                    <img src="images/color-a-cube.jpg" alt="Color A Cube Game Screenshot">
+                </div>
+                <div class="project-content">
                 <h3>Color A Cube</h3>
-                <p>A cozy coloring by number game</p>
+                <p><strong>VR/PC Relaxing Coloring Game</strong></p>
+                <p>A live-service coloring game on Meta Quest, Steam, and Pico. Developed core gameplay, progression systems, and extensive live-service infrastructure.</p>
+                <ul class="project-details">
+                    <li>Designed and implemented a full live-service system for monthly content updates.</li>
+                    <li>Created powerful editor tools for artists (Content Manager, Unity Economy Service deployment).</li>
+                    <li>Integrated Sentry and analytics to monitor game health and player engagement.</li>
+                </ul>
                 <div class="project-links">
-                    <a href="#" class="btn">View Project</a>
-                    <a href="#" class="btn">Source Code</a>
+                    <a href="https://www.meta.com/en-gb/experiences/color-a-cube/8774301352666408/?srsltid=AfmBOoqmc8-Lo-UxiILuHKv9hVwHv8xphbzFChFdJrXTSb0MsGLxqO1c" class="btn" target="_blank">View Project</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-40">B2B Projects</h3>
+        <div class="project-grid">
+            <!-- Tectum (B2B) -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/tectum.jpg" alt="Tectum VR Training Screenshot">
+                </div>
+                <div class="project-content">
+                <h3>Tectum (B2B)</h3>
+                <p><strong>Sole Developer | VR Safety Training</strong></p>
+                <p>A comprehensive roof safety training application. Guided new employees through safety modules, equipment checks, and risk assessments.</p>
+                <ul class="project-details">
+                    <li>Developed the entire application from scratch as the sole programmer.</li>
+                    <li>Collaborated closely with artists to create realistic training scenarios.</li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Silmaco (B2B) -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/silmaco.jpg" alt="Silmaco XR Training Screenshot">
+                </div>
+                <div class="project-content">
+                <h3>Silmaco (B2B)</h3>
+                <p><strong>Sole Developer | XR/Desktop Industrial Training</strong></p>
+                <p>A chemical plant operation training tool using a digital twin and 360° video to teach complex machine start/stop procedures.</p>
+                <ul class="project-details">
+                    <li>Created the application for both XR and flatscreen desktop platforms.</li>
+                    <li>Implemented a hybrid learning experience combining video and interactive 3D elements.</li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Sort-A-Smurf -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/sort-a-smurf.jpg" alt="Sort-A-Smurf Game Screenshot">
+                </div>
+                <div class="project-content">
+                <h3>Sort-A-Smurf</h3>
+                <p><strong>Educational XR Game</strong></p>
+                <p>Expanded an existing educational game with the "Gargamel’s Lair" level to reinforce recycling and sorting concepts for kids.</p>
+                <div class="project-links">
+                    <a href="https://altereyes.com/case/sort-a-smurf/" class="btn" target="_blank">View Project</a>
+                </div>
                 </div>
             </div>
         </div>
@@ -69,18 +165,30 @@
         <h2>Skills</h2>
         <div class="skills-container">
             <div class="skill-category">
-                <h3>Languages</h3>
+                <h3>Programming</h3>
                 <ul>
-                    <li>C#</li>
+                    <li>C# / .NET</li>
+                    <li>Unity Engine</li>
+                    <li>Multiplayer (Photon Fusion)</li>
+                    <li>Core Systems & AI</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Tools & Technologies</h3>
+                <h3>Backend & Services</h3>
                 <ul>
-                    <li>Unity</li>
-                    <li>Git</li>
-                    <li>Unity Game Services</li>
-                    <li>Rider</li>
+                    <li>Unity Game Services (UGS)</li>
+                    <li>Authentication & Leaderboards</li>
+                    <li>In-App Purchases & Economy</li>
+                    <li>Vivox Voice Chat</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & DevOps</h3>
+                <ul>
+                    <li>Custom Editor Tooling</li>
+                    <li>Git (Version Control)</li>
+                    <li>Performance Profiling</li>
+                    <li>Analytics & Sentry</li>
                 </ul>
             </div>
         </div>
@@ -111,7 +219,7 @@
 
 <footer>
     <div class="container">
-        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+        <p>&copy; 2026 Maximiliaan Hendrikx. All Rights Reserved.</p>
     </div>
 </footer>
 
