@@ -361,6 +361,12 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+/* Aventura Chinampa Zoom Adjustment */
+.aventura-chinampa img {
+    object-fit: contain; /* Options: cover (default, zooms in), contain (shows full image), scale-down */
+    padding: 10px;        /* Adds space around the image if using contain */
+}
+
 .project-content {
     padding: 20px;
     flex-grow: 1;
