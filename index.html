@@ -14,7 +14,7 @@
 <header>
     <div class="container header-flex">
         <a href="#" class="logo">Maximiliaan Hendrikx</a>
-        <nav>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Work</a></li>
@@ -24,10 +24,15 @@
                 <li><a href="#contact" class="nav-contact-btn">Contact</a></li>
             </ul>
         </nav>
-        <div class="theme-toggle-wrapper">
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <span class="toggle-icon"></span>
+        <div class="nav-toggle-wrapper">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
             </button>
+            <div class="theme-toggle-wrapper">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
         </div>
     </div>
 </header>
@@ -72,7 +77,7 @@
         <h2>Projects</h2>
 
         <h3 class="project-category-title mt-40">Commercial Projects</h3>
-        <div class="project-grid">
+        <div class="project-grid project-grid-commercial">
             <!-- Big Shots -->
             <div class="project-card">
                 <div class="project-image">
@@ -81,6 +86,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Big Shots</h3>
+                    <span class="project-role">Lead Developer | VR/PC Cooperative Roguelite</span>
                     <p>A cooperative roguelite VR mech wave shooter released on PS5 VR, SteamVR, Meta Quest, and Pico. Led a team of 4 developers from vertical slice to multi-platform release.</p>
                     <ul class="project-details">
                         <li>Contributed to core systems: wave management, weapon mechanics, enemy AI (pathfinding), and networking.</li>
@@ -109,7 +115,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Color-A-Cube</h3>
-                    <p><strong>Lead Developer | VR/PC Relaxing Coloring Game</strong></p>
+                    <span class="project-role">Lead Developer | VR/PC Relaxing Coloring Game</span>
                     <p>A live-service coloring game on Meta Quest, Steam, and Pico. Developed core gameplay, progression systems, and extensive live-service infrastructure.</p>
                     <ul class="project-details">
                         <li>Designed and implemented a full live-service system for monthly content updates.</li>
@@ -141,7 +147,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Tectum</h3>
-                    <p><strong>Sole Developer | VR Safety Training</strong></p>
+                    <span class="project-role">Sole Developer | VR Safety Training</span>
                     <p>A comprehensive roof safety training application. Guided new employees through safety modules, equipment checks, and risk assessments.</p>
                     <ul class="project-details">
                         <li>Developed the entire application from scratch as the sole programmer.</li>
@@ -165,7 +171,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Silmaco</h3>
-                    <p><strong>Sole Developer | XR/Desktop Industrial Training</strong></p>
+                    <span class="project-role">Sole Developer | XR/Desktop Industrial Training</span>
                     <p>A chemical plant operation training tool using a digital twin and 360° video to teach complex machine start/stop procedures.</p>
                     <ul class="project-details">
                         <li>Created the application for both XR and flatscreen desktop platforms.</li>
@@ -189,7 +195,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Sort-A-Smurf</h3>
-                    <p><strong>Educational XR Game</strong></p>
+                    <span class="project-role">Educational XR Game</span>
                     <p>Expanded an existing educational game with the "Gargamel’s Lair" level to reinforce recycling and sorting concepts for kids.</p>
                     <div class="project-tags">
                         <span>Unity</span>
@@ -214,7 +220,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Hex-Strategy</h3>
-                    <p><strong>Hexgrid Strategy Prototype | GitHub Project</strong></p>
+                    <span class="project-role">Hexgrid Strategy Prototype | GitHub Project</span>
                     <p>A prototype of a hexgrid-based strategy game, combining card-based mechanics with turn-based tactical combat. Developed as a testbed for the Reflex Dependency Injection framework in Unity.</p>
                     <div class="project-tags">
                         <span>Unity</span>
@@ -235,7 +241,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Antithesis</h3>
-                    <p><strong>Action Arcade Game</strong></p>
+                    <span class="project-role">Action Arcade Game</span>
                     <p>A unique top-down arcade high-score chaser where you control two ships simultaneously, each with opposing goals: avoid or destroy.</p>
                     <div class="project-tags">
                         <span>Unity</span>
@@ -257,7 +263,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Ocean Trash: Cleanup</h3>
-                    <p><strong>Game Jam Project</strong></p>
+                    <span class="project-role">Game Jam Project</span>
                     <p>An environmental arcade game where you manage a cleanup boat to collect ocean trash while balancing fuel and weight. Evade the kraken as your cargo slows you down.</p>
                     <div class="project-tags">
                         <span>Unity</span>
@@ -282,7 +288,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Factory Of Anarchy</h3>
-                    <p><strong>Game Jam Project</strong></p>
+                    <span class="project-role">Game Jam Project</span>
                     <p>A fast-paced mini-game high-score chaser created for a one-week game jam, featuring an original soundtrack.</p>
                     <div class="project-tags">
                         <span>Unity</span>
@@ -307,7 +313,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Aventura Chinampa</h3>
-                    <p><strong>Educational Museum Game</strong></p>
+                    <span class="project-role">Educational Museum Game</span>
                     <p>A school group project created for 3museos, gamifying ancient Mexican chinampa harvesting to teach museum visitors about traditional culture.</p>
                     <div class="project-tags">
                         <span>Unity</span>

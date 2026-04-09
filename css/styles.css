@@ -167,6 +167,7 @@ header .header-flex {
     font-size: 1.5rem;
     color: var(--heading-color) !important;
     letter-spacing: -1px;
+    z-index: 1002;
 }
 
 nav ul {
@@ -317,6 +318,14 @@ nav ul li a:hover, nav ul li a.active {
     gap: 32px;
 }
 
+.project-grid-commercial {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-grid-commercial .project-image {
+    height: 320px;
+}
+
 .project-card {
     background: var(--card-bg);
     border-radius: 16px;
@@ -390,8 +399,16 @@ nav ul li a:hover, nav ul li a.active {
 
 .project-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: var(--heading-color);
+}
+
+.project-role {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    display: block;
 }
 
 .project-category-title {
@@ -716,6 +733,49 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
 }
 
+/* Navigation Toggle */
+.nav-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--heading-color);
+    position: relative;
+    transition: background 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--heading-color);
+    left: 0;
+    transition: transform 0.3s;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { bottom: -8px; }
+
+.nav-toggle.active .hamburger { background: transparent; }
+.nav-toggle.active .hamburger::before { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.active .hamburger::after { transform: translateY(-8px) rotate(-45deg); }
+
 /* Theme Toggle */
 .theme-toggle {
     width: 48px;
@@ -818,10 +878,107 @@ footer {
 
 @media (max-width: 768px) {
     section { padding: 60px 0; }
-    #about { padding-top: 80px; }
-    .hero-title { font-size: 2.5rem; }
-    .hero-subtitle { font-size: 1.25rem; }
-    nav { display: none; } /* Add hamburger menu logic if needed */
+    #about { 
+        padding-top: 100px; 
+        text-align: center;
+    }
+    .hero-title { 
+        font-size: 2.5rem; 
+        letter-spacing: -1px;
+    }
+    .hero-subtitle { font-size: 1.1rem; }
+    .about-text p { font-size: 1rem; }
+    
+    .nav-toggle { display: block; }
+    
+    #nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--card-bg);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding: 100px 40px;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        display: block;
+    }
+    
+    #nav-menu.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+    
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .about-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .education-card {
+        padding: 25px;
+    }
+    
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .skill-category {
+        padding: 25px;
+    }
+
+    .interest-card {
+        padding: 25px;
+    }
+
+    .contact-info p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    #contact-form {
+        padding: 25px;
+    }
+
     .skills-container, .interests-grid, .project-grid { grid-template-columns: 1fr; }
+    .project-grid-commercial { grid-template-columns: 1fr; }
+    .project-grid-commercial .project-image { height: 240px; }
     .stat-number { font-size: 1.5rem; }
 }
