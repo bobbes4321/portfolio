@@ -83,37 +83,95 @@ if (contactForm) {
     });
 }
 
-// Animate elements when they come into view
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.project-card, .skill-category');
+// Typewriter Effect
+const typewriterElement = document.getElementById('typewriter');
+const phrases = ['Lead Unity Developer', 'VR & XR Specialist', 'Multiplayer Architect', 'Sound Designer'];
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typeSpeed = 150;
 
-    elements.forEach(element => {
-        const position = element.getBoundingClientRect();
+function type() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 75;
+    } else {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 150;
+    }
 
-        // If element is in viewport
-        if(position.top < window.innerHeight && position.bottom >= 0) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }
-    });
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 500;
+    }
+
+    setTimeout(type, typeSpeed);
 }
 
-// Add initial styles for animation
-document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.project-card, .skill-category');
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => {
+    type();
+    
+    // Animate elements when they come into view
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-    elements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section, .project-card, .skill-category, .interest-card, .education-card').forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
     });
 
-    // Call once to animate elements already in view
-    animateOnScroll();
+    // Make project cards clickable
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Find the first link in the card
+            const link = card.querySelector('.project-links .btn') || card.querySelector('a');
+            
+            // If the user clicked on a link or a button inside the card, let the browser handle it
+            if (e.target.tagName === 'A' || e.target.closest('a') || e.target.tagName === 'BUTTON') {
+                return;
+            }
+
+            if (link) {
+                const url = link.getAttribute('href');
+                const target = link.getAttribute('target') || '_self';
+                
+                if (url) {
+                    window.open(url, target);
+                }
+            }
+        });
+    });
 });
 
-// Listen for scroll events
-window.addEventListener('scroll', animateOnScroll);
+// Scroll header effect
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.style.padding = '5px 0';
+        header.style.boxShadow = 'var(--shadow-md)';
+    } else {
+        header.style.padding = '15px 0';
+        header.style.boxShadow = 'none';
+    }
+});
 
 // Highlight current nav tab on scroll
 const sections = document.querySelectorAll('section[id]');

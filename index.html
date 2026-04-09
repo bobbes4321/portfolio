@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maximiliaan Hendrikx</title>
     <link rel="icon" type="image/jpeg" href="images/Headshot.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header>
-    <div class="container">
-        <h1>Maximiliaan Hendrikx</h1>
+    <div class="container header-flex">
+        <a href="#" class="logo">Maximiliaan Hendrikx</a>
         <nav>
             <ul>
-                <li><a href="#hero">About</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#interests">Interests</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-contact-btn">Contact</a></li>
             </ul>
         </nav>
         <div class="theme-toggle-wrapper">
@@ -29,23 +32,35 @@
     </div>
 </header>
 
-<section id="hero">
-    <div class="container hero-combined">
-        <div class="hero-content">
-            <h1>Maximiliaan Hendrikx</h1>
-            <p>Lead Unity Developer | VR & XR Specialist</p>
-        </div>
-
+<section id="about">
+    <div class="container hero-container">
         <div class="about-flex">
             <div class="about-image">
                 <img src="images/Headshot.jpg" alt="Maximiliaan Hendrikx Headshot">
+                <div class="image-overlay"></div>
             </div>
             <div class="about-text">
-                <p>I am a passionate software developer specializing in Unity C# development. As a Lead Programmer at AlterEyes, I have extensive experience managing small developer teams and collaborating across departments to deliver high-quality games and B2B applications.</p>
-                <p>With a proven track record of shipping titles across PS5 VR, SteamVR, Meta Quest, and Pico, I excel at building core gameplay systems, implementing multiplayer features, and creating efficient editor tools to streamline production.</p>
-                <div class="about-actions">
-                    <a href="Hendrikx.pdf" class="btn" target="_blank">Download CV (PDF)</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                <h1 class="hero-title">Maximiliaan Hendrikx</h1>
+                <p class="hero-subtitle"><span id="typewriter">Lead Unity Developer</span></p>
+                <p>I am a passionate software developer specializing in <strong>Unity C# development</strong>. As a Lead Programmer at AlterEyes, I have extensive experience managing small developer teams and collaborating across departments to deliver high-quality games and B2B applications.</p>
+                <p>With a proven track record of shipping titles across <strong>PS5 VR, SteamVR, Meta Quest, and Pico</strong>, I excel at building core gameplay systems, implementing multiplayer features, and creating efficient editor tools to streamline production.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Years Exp</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Platforms</span>
+                    </div>
+                </div>
+                <div class="hero-actions mt-30">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="Hendrikx.pdf" class="btn btn-outline" target="_blank">Download CV</a>
                 </div>
             </div>
         </div>
@@ -56,16 +71,16 @@
     <div class="container">
         <h2>Projects</h2>
 
-        <h3>Commercial Projects</h3>
+        <h3 class="project-category-title mt-40">Commercial Projects</h3>
         <div class="project-grid">
             <!-- Big Shots -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/big-shots.jpg" alt="Big Shots Game Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/big-shots.jpg');"></div>
+                    <img src="images/big-shots.jpg" alt="Big Shots Game Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Big Shots</h3>
-                    <p><strong>Lead Developer | VR Mech Roguelite Shooter</strong></p>
                     <p>A cooperative roguelite VR mech wave shooter released on PS5 VR, SteamVR, Meta Quest, and Pico. Led a team of 4 developers from vertical slice to multi-platform release.</p>
                     <ul class="project-details">
                         <li>Contributed to core systems: wave management, weapon mechanics, enemy AI (pathfinding), and networking.</li>
@@ -79,10 +94,6 @@
                         <span>VR</span>
                         <span>Photon Fusion</span>
                         <span>UGS</span>
-                        <span>Vivox</span>
-                        <span>Sound Design</span>
-                        <span>PS5 VR</span>
-                        <span>Meta Quest</span>
                     </div>
                     <div class="project-links">
                         <a href="https://www.bigshots-vr.com/" class="btn" target="_blank">View Project</a>
@@ -90,13 +101,14 @@
                 </div>
             </div>
 
-            <!-- Color A Cube -->
+            <!-- Color-A-Cube -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/color-a-cube.jpg" alt="Color A Cube Game Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/color-a-cube.jpg');"></div>
+                    <img src="images/color-a-cube.jpg" alt="Color-A-Cube Game Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
-                    <h3>Color A Cube</h3>
+                    <h3>Color-A-Cube</h3>
                     <p><strong>Lead Developer | VR/PC Relaxing Coloring Game</strong></p>
                     <p>A live-service coloring game on Meta Quest, Steam, and Pico. Developed core gameplay, progression systems, and extensive live-service infrastructure.</p>
                     <ul class="project-details">
@@ -110,24 +122,22 @@
                         <span>Live Service</span>
                         <span>Editor Tools</span>
                         <span>MR</span>
-                        <span>Desktop</span>
-                        <span>Sound Design</span>
                         <span>Economy Service</span>
-                        <span>Meta Quest</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://www.meta.com/en-gb/experiences/color-a-cube/8774301352666408/?srsltid=AfmBOoqmc8-Lo-UxiILuHKv9hVwHv8xphbzFChFdJrXTSb0MsGLxqO1c" class="btn" target="_blank">View Project</a>
+                        <a href="https://www.meta.com/en-gb/experiences/color-a-cube/8774301352666408/" class="btn" target="_blank">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h3 class="mt-40">B2B Projects</h3>
+        <h3 class="project-category-title mt-40">B2B Projects</h3>
         <div class="project-grid">
             <!-- Tectum (B2B) -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/tectum.jpg" alt="Tectum VR Training Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/tectum.jpg');"></div>
+                    <img src="images/tectum.jpg" alt="Tectum VR Training Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Tectum</h3>
@@ -150,7 +160,8 @@
             <!-- Silmaco (B2B) -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/silmaco.jpg" alt="Silmaco XR Training Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/silmaco.jpg');"></div>
+                    <img src="images/silmaco.jpg" alt="Silmaco XR Training Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Silmaco</h3>
@@ -173,7 +184,8 @@
             <!-- Sort-A-Smurf -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/sort-a-smurf.jpg" alt="Sort-A-Smurf Game Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/sort-a-smurf.jpg');"></div>
+                    <img src="images/sort-a-smurf.jpg" alt="Sort-A-Smurf Game Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Sort-A-Smurf</h3>
@@ -192,12 +204,13 @@
             </div>
         </div>
 
-        <h3 class="mt-40">Personal & Jam Projects</h3>
+        <h3 class="project-category-title mt-40">Personal & Jam Projects</h3>
         <div class="project-grid">
             <!-- Hex-Strategy -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/hex-strategy.jpg" alt="Hex-Strategy Game Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/hex-strategy.jpg');"></div>
+                    <img src="images/hex-strategy.jpg" alt="Hex-Strategy Game Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Hex-Strategy</h3>
@@ -207,20 +220,18 @@
                         <span>Unity</span>
                         <span>C#</span>
                         <span>Hex-Grid</span>
-                        <span>Strategy</span>
                         <span>Reflex DI</span>
-                        <span>Open Source</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/bobbes4321/Strategy" class="btn" target="_blank">View Code on GitHub</a>
+                        <a href="https://github.com/bobbes4321/Hex-Strategy" class="btn" target="_blank">View Code on GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Antithesis -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/antithesis.jpg" alt="Antithesis Game Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/antithesis.jpg');"></div>
+                    <img src="images/antithesis.jpg" alt="Antithesis Game Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Antithesis</h3>
@@ -229,7 +240,6 @@
                     <div class="project-tags">
                         <span>Unity</span>
                         <span>C#</span>
-                        <span>Music Composition</span>
                         <span>Arcade</span>
                         <span>Steam</span>
                     </div>
@@ -242,7 +252,8 @@
             <!-- Ocean Trash: Cleanup -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/ocean-trash-cleanup.jpg" alt="Ocean Trash: Cleanup Game Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/ocean-trash-cleanup.jpg');"></div>
+                    <img src="images/ocean-trash-cleanup.jpg" alt="Ocean Trash: Cleanup Game Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Ocean Trash: Cleanup</h3>
@@ -266,7 +277,8 @@
             <!-- Factory Of Anarchy -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/factory-of-anarchy.png" alt="Factory Of Anarchy Game Screenshot">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/factory-of-anarchy.png');"></div>
+                    <img src="images/factory-of-anarchy.png" alt="Factory Of Anarchy Game Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Factory Of Anarchy</h3>
@@ -289,8 +301,9 @@
 
             <!-- Aventura Chinampa -->
             <div class="project-card">
-                <div class="project-image aventura-chinampa">
-                    <img src="images/aventura-chinampa.png" alt="Aventura Chinampa Game Screenshot">
+                <div class="project-image">
+                    <div class="project-image-blurred-bg" style="background-image: url('images/aventura-chinampa.png');"></div>
+                    <img src="images/aventura-chinampa.png" alt="Aventura Chinampa Game Screenshot" class="project-img-contain">
                 </div>
                 <div class="project-content">
                     <h3>Aventura Chinampa</h3>
@@ -316,7 +329,7 @@
         <h2>Skills & Expertise</h2>
 
         <div class="skills-intro">
-            <p>I am deeply passionate about code architecture and software quality. During my time as Lead Developer, I took ownership of our internal ecosystem, managing and expanding a suite of robust, cross-platform Unity packages. This included developing and maintaining a custom Dependency Injection and Messaging framework, a unified Achievements system, and comprehensive Store and Cloud Data packages for seamless cross-platform integration. I advocate for rigorous stability through extensive Unit and Playmode testing, ensuring that our core frameworks and projects—like Color A Cube—remain reliable and maintainable at scale.</p>
+            <p>I am deeply passionate about code architecture and software quality. During my time as Lead Developer, I took ownership of our internal ecosystem, managing and expanding a suite of robust, cross-platform Unity packages. This included developing and maintaining a custom Dependency Injection and Messaging framework, a unified Achievements system, and comprehensive Store and Cloud Data packages for seamless cross-platform integration. I advocate for rigorous stability through extensive Unit and Playmode testing, ensuring that our core frameworks and projects, like Color-A-Cube, remain reliable and maintainable at scale.</p>
         </div>
 
         <div class="skills-container">
@@ -356,15 +369,16 @@
         <h2>Education & Background</h2>
         <div class="education-card">
             <div class="edu-header">
-                <h3>Digital Arts & Entertainment (DAE)</h3>
+                <div>
+                    <h3 class="edu-school">Howest University of Applied Sciences</h3>
+                    <p class="edu-degree">Bachelor of Independent Game Production <span style="white-space: nowrap;">Magna Cum Laude</span></p>
+                </div>
                 <span class="edu-date">2018 - 2021</span>
             </div>
-            <p class="edu-school">Howest University of Applied Sciences</p>
-            <p class="edu-degree">Bachelor of Independent Game Production — Magna Cum Laude</p>
-            <ul class="edu-details">
-                <li>Ranked as the #1 Game Design and Development School in the world (The Rookies).</li>
-                <li>Specialized in technical game development and production pipelines.</li>
-            </ul>
+            <div class="edu-details">
+                <h3>Digital Arts & Entertainment (DAE)</h3>
+                <p>Ranked as the #1 Game Design and Development School in the world (The Rookies).</p>
+            </div>
         </div>
     </div>
 </section>
@@ -375,8 +389,8 @@
         <div class="interests-grid">
             <div class="interest-card">
                 <div class="interest-icon">🎵</div>
-                <h3>Music & Composition</h3>
-                <p>Music is my second language. I've composed two musicals—playing piano one year and violin the next—and I even recorded an album that's on Spotify. Whether it's the drums, piano, or violin, I love the creative process of making something from scratch.</p>
+                <h3>Music and Composition</h3>
+                <p>Music is my second language. I've composed two musicals, playing piano one year and violin the next, and I even recorded an album that's on Spotify. Whether it's the drums, piano, or violin, I love the creative process of making something from scratch.</p>
             </div>
             <div class="interest-card">
                 <div class="interest-icon">🧗</div>
@@ -400,11 +414,11 @@
                 <p>I'm always open to discussing new opportunities or technical challenges. Feel free to reach out!</p>
                 <div class="contact-methods">
                     <div class="contact-method">
-                        <span class="contact-icon">📧</span>
+                        <div class="contact-icon">📧</div>
                         <a href="mailto:maximiliaanhendrikx@gmail.com">maximiliaanhendrikx@gmail.com</a>
                     </div>
                     <div class="contact-method">
-                        <span class="contact-icon">🔗</span>
+                        <div class="contact-icon">🔗</div>
                         <a href="https://www.linkedin.com/in/maximiliaan-hendrikx-8a960521b/" target="_blank">LinkedIn Profile</a>
                     </div>
                 </div>
