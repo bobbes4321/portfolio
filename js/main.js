@@ -1,4 +1,25 @@
-﻿// Smooth scrolling for navigation links
+﻿// Theme toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+            theme = 'light';
+        } else {
+            theme = 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    });
+}
+
+// Smooth scrolling for navigation links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -93,26 +114,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Listen for scroll events
 window.addEventListener('scroll', animateOnScroll);
-
-// Implement a dark/light mode toggle
-function setupThemeToggle() {
-    // This would be implemented with a toggle button in the UI
-    // For now, we'll prepare the code but not activate it
-
-    const toggleTheme = () => {
-        document.body.classList.toggle('dark-mode');
-
-        // Store preference
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode);
-    };
-
-    // Check for saved preference
-    const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode === 'true') {
-        document.body.classList.add('dark-mode');
-    }
-
-    // To use this, you would add a toggle button to your HTML
-    // and call toggleTheme when it's clicked
-}
