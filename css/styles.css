@@ -475,11 +475,19 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .skills-intro {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto 4rem;
     text-align: center;
     font-size: 1.125rem;
     color: var(--text-muted);
+}
+
+.skills-intro p {
+    margin-bottom: 1.5rem;
+}
+
+.skills-intro p:last-child {
+    margin-bottom: 0;
 }
 
 .skills-container {
